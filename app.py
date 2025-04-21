@@ -21,7 +21,6 @@ class PrintRequest(BaseModel):
 # Fonction pour détecter automatiquement une imprimante Xprinter
 def find_xprinter():
     known_xprinter_vids = [0x0483, 0x5740, 0x04B8]  # Ajoute ici les VendorID si nécessaire
-    
 
     for dev in usb.core.find(find_all=True):
         try:
